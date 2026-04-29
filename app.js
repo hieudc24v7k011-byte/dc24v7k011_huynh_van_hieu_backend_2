@@ -14,7 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/contacts", contactsRouter);
-
+// handle 404 response
 app.use((req, res, next) => {
   next(new ApiError(404, "Resource not found"));
 });
